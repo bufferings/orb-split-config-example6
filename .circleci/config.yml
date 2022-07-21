@@ -12,6 +12,7 @@ workflows:
       - split-config/generate-config:
           find-config-regex: .*/\.circleci/.*\.yml
           generated-config-path: /tmp/generated_config.yml
+          continuation: false
           post-steps:
             - persist_to_workspace:
                 root: /tmp
